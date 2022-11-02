@@ -41,3 +41,8 @@ change -4 to -12 nodes
 change user_nl_cam and user_nl_clm files (can be found those files in this repository)
 ./case.build
 ./case.submit
+
+
+Note: SST file default used is : /cluster/shared/noresm/inputdata/atm/cam/sst/sst_HadOIBl_bc_0.9x1.25_1850_2017_c180507.nc
+prescribed in docn.streams.txt.prescribed and docn_in
+
