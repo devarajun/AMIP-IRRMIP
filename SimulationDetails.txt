@@ -1,0 +1,43 @@
+https://noresm-docs.readthedocs.io/en/noresm2/access/releases_noresm20.html#noresm2-0-5
+
+git clone https://github.com/NorESMhub/NorESM.git
+cd NorESM
+git tag --list (this should give you a list of the existing tags or releases)
+git checkout release-noresm2.0.5
+./manage_externals/checkout_externals
+
+AMIP style simulation setup:
+
+https://noresm-docs.readthedocs.io/en/noresm2/configurations/amips.html#amip-style-simulations-with-observed-ssts-and-frc2-emission-files
+
+
+./cime/scripts/create_newcase -case /cluster/home/devarajun/cases_amip/hist-irr --res f09_f09_mg17 --mach betzy --project nn8057k --compset NFHISTfsstfrc2
+
+cd /cluster/home/devarajun/cases_amip/hist-irr
+grep -i OCN_FLUX_SCHEME *
+env_run.xml:    <entry id="OCN_FLUX_SCHEME" value="1">
+#change the start date of the simulation
+./xmlchange RUN_STARTDATE=1900-01-01
+
+edit env_mach_pes.xml file
+change -4 to -12 nodes
+    <entry id="NTASKS">
+      <type>integer</type>
+      <values>
+        <value compclass="ATM">-12</value>
+        <value compclass="CPL">-12</value>
+        <value compclass="OCN">-12</value>
+        <value compclass="WAV">-12</value>
+        <value compclass="GLC">-12</value>
+        <value compclass="ICE">-12</value>
+        <value compclass="ROF">-12</value>
+        <value compclass="LND">-12</value>
+        <value compclass="ESP">1</value>
+      </values>
+
+./xmlchange JOB_WALLCLOCK_TIME=05:00:00
+
+./case.setup
+change user_nl_cam and user_nl_clm files (can be found those files in this repository)
+./case.build
+./case.submit
