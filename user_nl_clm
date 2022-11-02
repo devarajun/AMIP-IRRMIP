@@ -1,0 +1,41 @@
+! Defalut monthly output
+hist_fincl1 = 'QIRRIG_DEMAND', 'QIRRIG', 'H2OSOI', 'TWS', 'TLAI', 'SOIL1C', 'TOT_WOODPRODC', 'GPP', 'NPP', 'TOTVEGC',
+         'EFLX_LH_TOT_ICE', 'FIRE_ICE', 'FLDS_ICE', 'FSH_ICE', 'FSNO_ICE', 'FSR_ICE', 'QFLX_SUB_SNOW_ICE',
+         'QRUNOFF_ICE', 'QSNOFRZ_ICE', 'QSNOMELT_ICE', 'RAIN_ICE', 'SNOW_ICE', 'SNOWICE_ICE', 'SNOWLIQ_ICE',
+         'SNOTXMASS_ICE', 'TG_ICE', 'TOPO_COL_ICE', 'TSA_ICE', 'TSOI_ICE', 'LEAFC_TO_LITTER', 'FROOTC_TO_LITTER',
+         'LITR1C_TO_SOIL1C', 'LITR1N_TO_SOIL1N', 'LITR2C_TO_SOIL1C', 'LITR2N_TO_SOIL1N', 'LITR3C_TO_SOIL2C', 
+         'LITR3N_TO_SOIL2N', 'DWT_WOOD_PRODUCTC_GAIN_PATCH', 'GPP', 'NPP', 'AGNPP', 'TLAI', 'TOTVEGC', 'TSA', 'TREFMNAV', 'TREFMXAV', 'BTRANMN', 'NPP_NUPTAKE', 'GRAINC_TO_FOOD',
+         'Vcmx25Z', 'FCTR', 'FCEV', 'FGEV', 'FSH', 'FIRE', 'FSR', 'FIRA', 'FSA', 'NFERTILIZATION', 'AR',
+         'HR', 'VEGWP', 'HTOP', 'GSSUNLN', 'GSSHALN', 'TSKIN', 
+hist_fexcl1 = 'PCT_GLC_MEC', 'SOIL1C_vr', 'SOIL1N_vr', 'SOIL2C_vr', 'SOIL2N_vr', 'SOIL3C_vr', 'SOIL3N_vr', 'CWDC_vr',
+         'CWDN_vr', 'LITR1C_vr', 'LITR1N_vr', 'LITR2C_vr', 'LITR2N_vr', 'LITR3C_vr', 'LITR3N_vr', 'PCT_CFT',
+         'PCT_NAT_PFT', 'SMIN_NO3_vr', 'CONC_O2_UNSAT', 'CONC_O2_SAT', 'SMIN_NH4_vr', 'SMINN_vr'
+! Daily, gridscale, average
+hist_fincl2 = 'TSA:A', 'COSZEN', 'RH2M:A', 'Q2M:A', 'U10:A', 'PSurf:A', 'SWdown:A', 'LWdown:A', 'SWup:A', 'FIRA:A', 'LWup:A', 'EFLX_LH_TOT:A', 'Qle:A', 'QVEGT:A', 'QFLX_EVAP_TOT:A',
+		 'QRUNOFF:A', 'QOVER:A', 
+! Daily, gridscale, maximum
+hist_fincl3 = 'TSA:X', 'RH2M:X', 'Q2M:X'
+! Daily, gridscale, minimum
+hist_fincl4 = 'TSA:M', 'RH2M:M', 'Q2M:M'
+! Daily, land-use scale, average
+hist_fincl5 = 'TSA:A', 'RH2M:A'
+! Daily, land-use scale, maximum
+hist_fincl6 = 'TSA:X', 'RH2M:X'
+! Daily, land-use scale, minimum
+hist_fincl7 = 'TSA:M', 'RH2M:M'
+! 3-hourly, gridscale, average
+hist_fincl8 = 'TSA:A', 'COSZEN', 'RH2M:A', 'Q2M:A', 'U10:A', 'PSurf:A', 'SWdown:A', 'LWdown:A', 'SWup:A', 'FIRA:A', 'LWup:A'
+! monthly, land-use scale, average
+hist_fincl9 = 'GPP', 'NPP'
+hist_nhtfrq = 0, -24, -24, -24, -24, -24, -24, -3, 0
+hist_mfilt = 12, 365, 365, 365, 365, 365, 365, 2920, 120
+hist_dov2xy = .true., .true., .true., .true., .false., .false., .false., .true., .true.
+hist_type1d_pertape = '','', '','','PFTS','PFTS','PFTS','',''
+!flanduse_timeseries = '/glade/work/yiyao/landuse.timeseries_0.9x1.25_hist_78pfts_CMIP6_simyr1850-2015_c170824_noirr.nc'
+
+use_c13 = .true.
+use_c14 = .true.
+use_c13_timeseries = .true.
+use_c14_bombspike = .true.
+glacier_region_behavior = 'single_at_atm_topo','virtual','virtual','virtual'
+use_init_interp = .true.
