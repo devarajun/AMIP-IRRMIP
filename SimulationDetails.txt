@@ -20,7 +20,7 @@ env_run.xml:    <entry id="OCN_FLUX_SCHEME" value="1">
 ./xmlchange RUN_STARTDATE=1900-01-01
 
 edit env_mach_pes.xml file
-change -4 to -12 nodes
+change -4 to -12 nodes  (to use 1536 Cores) 1 node = 128 cores
     <entry id="NTASKS">
       <type>integer</type>
       <values>
@@ -36,6 +36,11 @@ change -4 to -12 nodes
       </values>
 
 ./xmlchange JOB_WALLCLOCK_TIME=05:00:00
+
+for longer wall clock times (4 days=96 hours) do the following:
+
+./xmlchange --subgroup case.run JOB_WALLCLOCK_TIME=96:00:00
+./xmlchange --subgroup case.st_archive JOB_WALLCLOCK_TIME=04:00:00
 
 ./case.setup
 change user_nl_cam and user_nl_clm files (can be found those files in this repository)
