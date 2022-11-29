@@ -51,3 +51,7 @@ change user_nl_cam and user_nl_clm files (can be found those files in this repos
 Note: SST file default used is : /cluster/shared/noresm/inputdata/atm/cam/sst/sst_HadOIBl_bc_0.9x1.25_1850_2017_c180507.nc
 prescribed in docn.streams.txt.prescribed and docn_in
 
+
+No-irrigation land use file from Yi Yao is stored in the project folder on Betzy:
+
+/cluster/projects/nn8057k/devarajun/landuse.timeseries_0.9x1.25_hist_78pfts_CMIP6_simyr1850-2015_c170824_noirr.nc
