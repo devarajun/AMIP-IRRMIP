@@ -58,6 +58,6 @@ prescribed irrigation (hist-noirr experiments) land use file from Yi Yao is stor
 
 For running ensembles:
 add small perturbation to the initial conditions:
-no perturbation to the initial conditions for hist-noirr  (realization 1)
+just add 'pertlim=1.e-14' to the user_nl_cam for hist-noirr  (realization 1)
 just add 'pertlim=2.e-14' in the user_nl_cam  for hist-noirr-r2 (realization 2)
 just add 'pertlim=3.e-14' in the user_nl_cam  for hist-noirr-r2 (realization 3)
