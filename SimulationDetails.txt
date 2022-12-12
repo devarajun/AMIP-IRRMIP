@@ -52,6 +52,12 @@ Note: SST file default used is : /cluster/shared/noresm/inputdata/atm/cam/sst/ss
 prescribed in docn.streams.txt.prescribed and docn_in
 
 
-No-irrigation land use file from Yi Yao is stored in the project folder on Betzy:
+prescribed irrigation (hist-noirr experiments) land use file from Yi Yao is stored in the project folder on Betzy:
 
 /cluster/projects/nn8057k/devarajun/landuse.timeseries_0.9x1.25_hist_78pfts_CMIP6_simyr1850-2015_c170824_noirr.nc
+
+For running ensembles:
+add small perturbation to the initial conditions:
+no perturbation to the initial conditions for hist-noirr  (realization 1)
+just add 'pertlim=2.e-14' in the user_nl_cam  for hist-noirr-r2 (realization 2)
+just add 'pertlim=3.e-14' in the user_nl_cam  for hist-noirr-r2 (realization 3)
